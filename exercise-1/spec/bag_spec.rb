@@ -9,19 +9,19 @@ RSpec.describe Bag do
     expect(bag.empty?).to be true
   end
 
-  xit 'can count the candy in an empty bag' do
+  it 'can count the candy in an empty bag' do
     bag = Bag.new
 
     expect(Bag.new.count).to eq(0)
   end
 
-  xit 'has no candies when it is empty' do
+  it 'has no candies when it is empty' do
     bag = Bag.new
 
     expect(Bag.new.candies).to eq([])
   end
 
-  xit 'can put a candy in a bag' do
+  it 'can put a candy in a bag' do
     bag = Bag.new
     candy = Candy.new('Sour frogs')
     bag.add_candy candy
@@ -29,14 +29,14 @@ RSpec.describe Bag do
     expect(bag.candies).to eq([candy])
   end
 
-  xit 'is not empty when it has candies' do
+  it 'is not empty when it has candies' do
     bag = Bag.new
     bag.add_candy Candy.new("Nerds")
 
     expect(bag.empty?).to be false
   end
 
-  xit 'can count candies' do
+  it 'can count candies' do
     bag = Bag.new
     bag.add_candy Candy.new("Caramelized Almonds")
 
@@ -49,7 +49,7 @@ RSpec.describe Bag do
   #   type = bag.candies.first.type
   # We'll talk about it more in a few weeks.
   # However. it's important to understand how these methods work.
-  xit 'contains candies and candies have a type' do
+  it 'contains candies and candies have a type' do
     bag = Bag.new
     bag.add_candy Candy.new("Hershey's Kisses")
     type = bag.candies.first.type
@@ -57,7 +57,7 @@ RSpec.describe Bag do
     expect(type).to eq("Hershey's Kisses")
   end
 
-  xit 'can be asked if it has a particular kind of candy' do
+  it 'can be asked if it has a particular kind of candy' do
     bag = Bag.new
     bag.add_candy Candy.new("Lindt chocolate")
 
